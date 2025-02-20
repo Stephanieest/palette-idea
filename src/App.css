@@ -1,3 +1,4 @@
+/* General Reset */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -5,25 +6,31 @@ body {
   overflow-x: hidden;
 }
 
+/* Light Mode - Soft Pastel */
 .light-mode {
-  background: #fde2e4;
+  background: #FCF6BD; /* Soft pastel yellow */
   color: #444;
 }
 
+/* Dark Mode - Deep & Neon */
 .dark-mode {
-  background: #0b0c10;
-  color: #e0e0e0;
+  background: #0B0C10;
+  color: #E0E0E0;
 }
 
+/* Header */
 header {
   text-align: center;
   padding: 20px;
-  font-size: 24px;
+  font-size: 26px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
+  font-family: 'Comic Sans MS', 'Poppins', sans-serif; /* Playful font */
+  text-shadow: 2px 2px 0px #fff, 4px 4px 0px #FF99C8;
 }
 
+/* Toggle Dark Mode */
 .corner-toggle {
   position: fixed;
   top: 20px;
@@ -31,40 +38,45 @@ header {
   z-index: 1000;
 }
 
+/* Toggle Switch */
 .toggle-switch {
   display: flex;
   align-items: center;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
   padding: 12px;
   border-radius: 50px;
   transition: background 0.3s;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  border: 3px solid #fff;
 }
 
 .toggle-switch input {
   display: none;
 }
 
+/* Slider */
 .slider {
-  width: 55px;
-  height: 28px;
+  width: 60px;
+  height: 30px;
   background: #ccc;
-  border-radius: 25px;
+  border-radius: 30px;
   position: relative;
   transition: background 0.3s;
+  border: 2px solid #999;
 }
 
 .slider:before {
   content: '';
   position: absolute;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   background: white;
   border-radius: 50%;
   top: 3px;
   left: 4px;
   transition: transform 0.3s;
+  border: 2px solid #666;
 }
 
 input:checked + .slider {
@@ -72,66 +84,73 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(27px);
+  transform: translateX(30px);
 }
 
+/* Toggle Label */
 .toggle-label {
   margin-left: 12px;
   font-weight: bold;
 }
 
+/* Cartoony Buttons */
 .futuristic-btn {
-  background: #ffb3c6;
+  background: #FF99C8;
   color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 18px;
+  border: 3px solid #FF66A1;
+  padding: 14px 26px;
+  border-radius: 50px;
+  font-size: 20px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+  text-shadow: 2px 2px #ff66a1;
 }
 
 .futuristic-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 0px 15px #ff99aa;
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0px 0px 20px #FF99AA;
 }
 
+/* Dark Mode Buttons - Neon Glow */
 .dark-mode .futuristic-btn {
-  background: #00eaff;
-  box-shadow: 0px 0px 15px #0078ff;
+  background: #00EAFF;
+  border: 3px solid #0078FF;
+  box-shadow: 0px 0px 20px #00EAFF;
+  text-shadow: 2px 2px #0078FF;
 }
 
 .dark-mode .futuristic-btn:hover {
-  box-shadow: 0px 0px 25px #00eaff;
+  box-shadow: 0px 0px 30px #00EAFF;
+  transform: scale(1.1) rotate(2deg);
 }
 
+/* Cartoony Sections */
 section {
   padding: 40px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 30px;
   margin: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 4px solid rgba(0, 0, 0, 0.2);
 }
 
+/* Light Mode Sections - Puffy Soft Style */
 .light-mode section {
-  background: rgba(255, 200, 215, 0.8);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
+  background: rgba(255, 200, 215, 0.9);
+  box-shadow: 5px 5px 0px #FF66A1, 10px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
 }
 
+/* Dark Mode Sections - Glowy & Cartoonish */
 .dark-mode section {
-  background: rgba(40, 40, 60, 0.85);
-  box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.3);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
+  background: rgba(40, 40, 60, 0.9);
+  box-shadow: 5px 5px 0px #00EAFF, 10px 10px 0px rgba(0, 255, 255, 0.3);
+  border-radius: 25px;
 }
 
 section:hover {
-  transform: scale(1.02);
+  transform: scale(1.05) rotate(-1deg);
 }
-
-
